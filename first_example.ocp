@@ -1,0 +1,12 @@
+begin library "threads"
+  generated = true
+  dirname = [ "%{OCAMLLIB}%/threads" ]
+  has_byte = false
+end
+
+begin program "first_example"
+  files = [ "first_example.ml"]
+  requires = [ "threads" "core" "biocaml" ]
+  link = [ "-thread" ]
+  comp = [ "-thread" ]
+end
