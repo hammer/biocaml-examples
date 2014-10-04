@@ -14,7 +14,7 @@ $ ocp-build root
 $ ocp-build build
 *)
 
-let toy_bam_file = "/Users/hammer/Dropbox/codebox/seqan/core/tests/store/toy.bam"
+let toy_bam_file = "data/toy.bam"
 
 let print_bam_file bam_file =
   Stream.iter
@@ -32,4 +32,4 @@ let print_bam_file bam_file =
 let () =
   print_bam_file (Bam.in_channel_to_item_stream (open_in toy_bam_file))
 
-  
+
